@@ -62,7 +62,8 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<Calculate Total Order>>>>>>>>>>>>>>>
     @Test
     public void calculate_total_order_should_be_zero_if_no_item_is_selected(){
-        assertEquals(0,restaurant.calculateTotalOrder());
+        List<String> selectedItems = new ArrayList<>(); // A list with no selected items
+        assertEquals(0,restaurant.calculateTotalOrder(selectedItems));
     }
 
     @Test
